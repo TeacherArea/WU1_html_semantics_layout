@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sv"> <!-- tillgänglighetsattribut: lang -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webbutveckling AB</title>
+    <meta name="keywords" content="HTML, sematic html, accessibility" />
+    <meta name="description" content="Web semantic and accessibility on the run" />
+    <meta name="author" content="Knut Gultand" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Välkommen till Webbutveckling AB</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">Hem</a></li>
+        <li><a href="#">Om oss</a></li>
+        <li><a href="#">Tjänster</a></li>
+        <li><a href="#">Kontakt</a></li>
+      </ul>
+    </nav>
+    <main>
+      <article>
+        <h2>Om oss</h2>
+        <p>
+          Vi är ett företag som specialiserar oss på att skapa avancerade
+          HTML-hemsidor med fokus på semantiska element och tillgänglighet.
+        </p>
+        <p id="video-title">Vår senaste produktvideo</p>
+        <button aria-labelledby="video-title" onclick="startVideo()">Spela upp video</button><!-- tillgänglighet: länka knappen till rubriken med aria-labelledby -->
+      </article>
+      <article>
+        <h2>Tjänster</h2>
+        <ul>
+          <li>Webbdesign</li>
+          <li>Webbutveckling</li>
+          <li>Tillgänglighetsoptimering</li>
+        </ul>
+        <label for="age-input">Din ålder:</label>
+        <input type="text" id="age-input" aria-describedby="age-info">
+        <p id="age-info">Användare under 18 år måste ha föräldrars tillstånd.</p><!-- tillgänglighet: länka meddelandet till input med aria-describedby -->
+      </article>
+      <section>
+        <h2>Senaste nyheter</h2>
+        <article>
+          <h3>Webbplatsen vinner utmärkelse för tillgänglighet</h3>
+          <p>
+            Vår webbplats har nyligen blivit belönad med utmärkelsen "Bästa
+            Tillgänglighet" av Tillgänglighetsorganisationen.
+          </p>
+          <figure>
+            <img src="horse.jpeg" alt="Photo of a horse" ><!-- tillgänglighet: lägg till alternativ text -->
+            <figcaption>The horse</figcaption>
+          </figure>
+        </article>
+        <article>
+          <h3>Nya tjänster tillgängliga</h3>
+          <p>
+            Vi har utökat vårt tjänsteutbud och erbjuder nu även
+            sökmotoroptimering och e-handelslösningar.
+          </p>
+        </article>
+      </section>
+      <aside>
+        <h2>Kontakt</h2>
+        <address> <!-- tillgänglighet: omge kontaktinformation med <address> -->
+          <p>
+            Kontakta oss via e-post:
+            <a href="mailto:info@example.com">info@example.com</a><!-- tillgänglighet: tydlig textbeskrivning för länkar -->
+          </p>
+          <p>Besök oss: 123 Gatan, Stad</p>
+          <p>Ring oss: <a href="tel:+123456789">123-456-789</a></p><!-- tillgänglighet: skriv telefonnummer som länk -->
+        </address>
+      </aside>
+    </main>
+    <footer aria-label="Contact information">
+        <nav role="navigation" aria-label="support menu"> <!-- tillgänglighet: ge information om avvikande användning med roller -->
+            <ul>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Kundinloggning</a></li>
+            </ul>
+          </nav>
+        &copy; 2023 Webbutveckling AB. Alla rättigheter förbehållna.
+    </footer>
+  </body>
+</html>
+
+<!-- Och glöm inte att undersök kontrasten samt färgschema! Analysera alltid med lighthouse -->
