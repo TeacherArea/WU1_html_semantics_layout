@@ -1,6 +1,6 @@
 # Ett första webbutvecklingsprojekt
 
-## Branshen CSS
+## Bransh: CSS
 
 De olika självbeskrivande brancherna är tänkt att visa på utvecklingen. Det rekomenderas att följa dessa i turordning:
  1. main (denna branch)
