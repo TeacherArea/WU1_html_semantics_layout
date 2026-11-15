@@ -1,6 +1,6 @@
 # Ett första webbutvecklingsprojekt
 
-## Brandchen javascript
+## Branch: javascript
 
 De olika självbeskrivande brancherna är tänkt att visa på utvecklingen. Det rekomenderas att följa dessa i turordning:
  1. main (denna branch)
