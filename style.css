@@ -1,150 +1,227 @@
+/* OVERALL ELEMENTS */
+
 * {
-    margin: 0;
-    padding: 0;
-    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  line-height: 1.6;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
 header h1 {
-    font-size: 36px;
+  font-size: 36px;
 }
 
 h2, h3 {
-    margin-top: 30px;
-}
-
-nav {
-    background-color: #444;
-    color: #fff;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-nav li {
-    border: 0;
-    margin: 0;
-    padding: 0
-}
-
-nav a {
-    display: block;
-    padding: 15px 20px;
-    text-decoration: none;
-    color: #fff;
-}
-
-nav li a:hover {
-    background-color: #333;
+  margin-top: 30px;
 }
 
 article li {
-    margin: 0 0 0 40px;
+  margin: 0 0 0 15px;
 }
 
 main {
-    max-width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-article, section {
-    margin-bottom: 60px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #ccc;
+article {
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
 }
 
-article h2, section h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
+article h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-video {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border: 2px solid #333;
+address {
+  font-style: normal;
 }
 
-button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
 }
 
-button:focus {
-    outline: 2px solid #ff5733;
+/* END: OVERAL ELEMENTS */
+
+/* NAVIGATION & MENUS */
+
+nav {
+  background-color: #444;
+  color: #fff;
 }
 
-label {
-    font-size: 16px;
-    color: #333;
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
 }
 
-input {
-    width: 98%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+@media screen and (max-width: 480px) {
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
-p#age-info {
-    font-size: 14px;
-    color: #999;
-    margin-top: 5px;
+nav li {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+nav li a:hover {
+  background-color: #333;
+}
+
+/* END: NAVIGATION & MENUS */
+
+/* IMAGES & VIDEOS */
+
+#animal-gallery {
+  max-width: 90%;
+  display: flex;
+  margin: 0px auto;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+#animal-gallery > article {
+  flex: 1 1 200px;
+  min-width: 0;
 }
 
 figure {
-    margin: 20px 0;
-    text-align: center;
+  margin: 20px 0;
+  text-align: center;
 }
 
 figure img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border: 2px solid #333;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #666;
 }
 
 figure figcaption {
-    font-style: italic;
-    color: #777;
-    margin-top: 10px;
+  font-style: italic;
+  color: #777;
+  margin-top: 10px;
 }
 
-#age-info{
-    margin-right: 40px;
-    margin-bottom: 30px;
-    text-align: end;
-    font-style: italic;
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #333;
 }
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+
+/* END: IMAGES & VIDEOS */
+
+/* FORMS */
+form {
+  display: flex;
+  margin: 20px auto;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
 }
+
+label {
+  font-size: 16px;
+  color: #333;
+}
+
+input {
+  width: 98%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  border-radius: 4px;
+  border: 2px solid #ccc;
+  margin-bottom: 20px;
+}
+
+#age-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.age-element {
+  align-self: center;
+}
+
+#age-info {
+  margin-right: 0px;
+  margin-bottom: 30px;
+  text-align: end;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.form-btn-container {
+  display: flex;
+  gap: 20px;
+}
+
+.form-fields-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-field > div {
+  flex: 1 1 200px;
+  min-width: 0;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+}
+
+/* END: FORMS */

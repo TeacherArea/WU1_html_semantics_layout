@@ -10,6 +10,7 @@
   <meta name="description" content="Web semantic and accessibility on the run" />
   <meta name="author" content="Knut Gultand" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -27,20 +28,20 @@
 
   <main>
     <h1>Välkommen till Webbutveckling Inc!</h1>
-      <article>
+    <article>
       <h2>Senaste nyheter</h2>
-      <h3>Webbplatsen vinner utmärkelse för tillgänglighet</h3>
+      <h3>Webbutveckling Inc belönas!</h3>
       <p>
         Vår webbplats har nyligen blivit belönad med utmärkelsen "Bästa
         Tillgänglighet" av Tillgänglighetsorganisationen.
       </p>
 
       <h3>Nya tjänster tillgängliga</h3>
-        <p>
-          Vi har utökat vårt tjänsteutbud och erbjuder nu även
-          sökmotoroptimering och e-handelslösningar.
-        </p>
-        <a href="#home">Tillbaka</a>
+      <p>
+        Vi har utökat vårt tjänsteutbud och erbjuder nu även
+        sökmotoroptimering och e-handelslösningar.
+      </p>
+      <a href="#home">Tillbaka</a>
     </article>
     <article>
       <h2 id="video-cats">Vår senaste video</h3>
@@ -50,59 +51,62 @@
         </video> <!-- tillgänglighet: länka videon till rubrik med aria-labelledby -->
         <a href="#home">Tillbaka</a>
     </article>
+    <h1 id="services">Tjänster</h1>
     <article>
-      <h1 id="services">Tjänster</h1>
-      <label for="age-input">Din ålder:</label>
-      <input type="text" id="age-input" aria-describedby="age-info" />
-      <p id="age-info">
-        Du måste skriv in din ålder för att se våra kurser. Användare under 18 år måste ha föräldrars tillstånd.
-      </p>
-      <!-- tillgänglighet: länka meddelandet till input med aria-describedby -->
-      <ul>
-        <li>Webbdesign</li>
-        <li>Webbutveckling</li>
-        <li>Tillgänglighetsoptimering</li>
-      </ul>
+      <div id="age-container">
+        <label class="age-element" for="age-input">Din ålder:</label>
+        <div class="age-element">
+          <input type="text" id="age-input"  value="18?" aria-describedby="You need to be adult to take our courses" />
+        </div>
+        <!-- tillgänglighet: länka meddelandet till input med aria-describedby -->
+      </div>
+              <ul>
+          <li>Webbdesign</li>
+          <li>Webbutveckling</li>
+          <li>Tillgänglighetsoptimering</li>
+        </ul>
     </article>
-    <article>
-      <h2>Hästar</h2>
-      <p>
-        Hästar (Equus) är det enda nu levande släktet inom familjen hästdjur (Equidae). Hästar är medelstora
-        däggdjur
-        med avlångt huvud och förhållandevis lång hals med man. De har långa smala ben
-        och står på en tå som skyddas av en hornartad hov. De har lång svans som antingen avslutas med en tofs eller
-        som helt är täckt med böljande hår, så kallat tagel.
-      </p>
-      <figure>
-        <img src="horse.jpeg" alt="Photo of a horse" /><!-- tillgänglighet: lägg till alternativ text -->
-        <figcaption>The horse</figcaption>
-      </figure>
-    </article>
-    <article>
-      <h2>Hundar</h2>
-      <p>
-        Hund (Canis lupus familiaris eller Canis lupus domesticus,[1] tidigare även Canis familiaris) är en
-        domesticerad underart av varg (Canis lupus). Hundar finns av många olika raser, vilka framavlats av
-        människan
-        sedan hunden domesticerades.
-      </p>
-      <figure>
-        <img src="dog.avif" alt="Photo of a dog, a collie" />
-        <figcaption>The dog</figcaption>
-      </figure>
-    </article>
-    <article>
-      <h2>Katter</h2>
-      <p>
-        Katt (felis catus) är ett relativt litet, smygjagande rovdjur i familjen kattdjur och ett vanligt
-        sällskapsdjur i stora delar av världen. Falbkatten (felis silvestris lybica), en underart till vildkatten
-        (felis silvestris), blev tidigt domesticerad av människan som nyttodjur för att hålla efter skadedjur eller
-        för sällskap, både på landet och i stadsmiljö.
-      </p>
-      <figure>
-        <img src="cat.jpg" alt="Photo of a horse" /><!-- tillgänglighet: lägg till alternativ text -->
-        <figcaption>The cat</figcaption>
-      </figure>
+    <h2>Veckans utvalda djur</h2>
+    <article id="animal-gallery">
+      <div class="card">
+        <h2>Hästar</h2>
+        <p>
+          Hästar (Equus) är det enda nu levande släktet inom familjen hästdjur (Equidae). Hästar är medelstora
+          däggdjur med avlångt huvud och förhållandevis lång hals med man. De har långa smala ben
+          och står på en tå som skyddas av en hornartad hov. De har lång svans som antingen avslutas med en tofs eller
+          som helt är täckt med böljande hår, så kallat tagel.
+        </p>
+        <figure>
+          <img src="horse.webp" alt="Photo of a horse" /><!-- tillgänglighet: lägg till alternativ text -->
+          <figcaption>The horse</figcaption>
+        </figure>
+      </div>
+      <div class="card">
+        <h2>Hundar</h2>
+        <p>
+          Hund (Canis lupus familiaris eller Canis lupus domesticus,[1] tidigare även Canis familiaris) är en
+          domesticerad underart av varg (Canis lupus). Hundar finns av många olika raser, vilka framavlats av
+          människan
+          sedan hunden domesticerades.
+        </p>
+        <figure>
+          <img src="dog.avif" alt="Photo of a dog, a collie" />
+          <figcaption>The dog</figcaption>
+        </figure>
+      </div>
+      <div class="card">
+        <h2>Katter</h2>
+        <p>
+          Katt (felis catus) är ett relativt litet, smygjagande rovdjur i familjen kattdjur och ett vanligt
+          sällskapsdjur i stora delar av världen. Falbkatten (felis silvestris lybica), en underart till vildkatten
+          (felis silvestris), blev tidigt domesticerad av människan som nyttodjur för att hålla efter skadedjur eller
+          för sällskap, både på landet och i stadsmiljö.
+        </p>
+        <figure>
+          <img src="cat.jpg" alt="Photo of a horse" /><!-- tillgänglighet: lägg till alternativ text -->
+          <figcaption>The cat</figcaption>
+        </figure>
+      </div>
     </article>
     <h1 id="about">Om oss</h2>
       <article>
@@ -112,6 +116,42 @@
         </p>
       </article>
       <h1 id="contact">Kontakt</h2>
+        <h2>Skicka ett mail</h2>
+        <form autocomplete="on">
+          <label for="username">* Ditt namn:</label>
+          <input type="text" id="username" name="username" autocomplete="name" required>
+          <label for="useremail">* Din mail:</label>
+          <input type="email" id="useremail" name="useremail" autocomplete="email" required>
+
+          <div class="form-fields-container">
+            <div class="form-field">
+              <label for="userbirthday">* När är du född:</label>
+              <input type="datetime-local" id="userbirthday" name="userbirthday" required>
+            </div>
+
+            <div class="form-field">
+              <label for="subject">Ditt ärende:</label>
+              <select id="subject" name="subject">
+                <option value="subject_info">Jag vill veta mer om era tjänster</option>
+                <option value="subject_support">Jag behöver support</option>
+                <option value="subject_invoice">Fakturaärenden</option>
+                <option value="subject_other">Övrigt</option>
+              </select>
+            </div>
+          </div>
+
+          <label for="usermsg">* Meddelande:</label>
+          <textarea id="usermsg" name="usermsg" required></textarea>
+
+          <label for="userfile">Bifoga en fil (valfritt)</label>
+          <input type="file" id="userfile" name="userfile">
+
+          <div class="form-btn-container">
+            <input class="form-buttons" type="submit" value="Skicka">
+            <input class="form-buttons" type="reset" value="Rensa">
+          </div>
+        </form>
+        <h2>Besök oss</h2>
         <article>
           <address>
             <!-- tillgänglighet: omge kontaktinformation med <address> -->
@@ -121,7 +161,7 @@
                 href="mailto:info@example.com">info@example.com</a><!-- tillgänglighet: tydlig textbeskrivning för länkar -->
             </p>
             <p>Besök oss: 123 Gatan, Stad</p>
-            <p>Ring oss: <a href="tel:+123456789">123-456-789</a></p>
+            <p>Ring oss: <a href="tel:+123456789">123 45 67 89</a></p>
             <!-- tillgänglighet: skriv telefonnummer som länk -->
           </address>
           <a href="#home">Tillbaka</a>
