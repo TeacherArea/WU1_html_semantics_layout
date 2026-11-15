@@ -57,20 +57,21 @@
     </article>
     <h1 id="services">Tjänster</h1>
     <article>
+      <label for="age-input">Din ålder:</label>
+      <input type="text" id="age-input" aria-describedby="age-info" />
+      <!-- tillgänglighet: länka meddelandet till input med aria-describedby -->
+      <p id="age-info">
+        Du måste skriv in din ålder för att se våra kurser. Användare under 18 år måste ha föräldrars tillstånd.
+      </p>
+
       <ul>
         <li>Webbdesign</li>
         <li>Webbutveckling</li>
         <li>Tillgänglighetsoptimering</li>
       </ul>
-      <label for="age-input">Din ålder:</label>
-      <input type="text" id="age-input" aria-describedby="age-info" />
-      <p id="age-info">
-        Användare under 18 år måste ha föräldrars tillstånd.
-      </p>
-      <!-- tillgänglighet: länka meddelandet till input med aria-describedby -->
     </article>
     <article>
-      <h3>Hästar</h3>
+      <h2>Hästar</h2>
       <p>
         Hästar (Equus) är det enda nu levande släktet inom familjen hästdjur (Equidae). Hästar är medelstora
         däggdjur
@@ -84,7 +85,7 @@
       </figure>
     </article>
     <article>
-      <h3>Hundar</h3>
+      <h2>Hundar</h2>
       <p>
         Hund (Canis lupus familiaris eller Canis lupus domesticus,[1] tidigare även Canis familiaris) är en
         domesticerad underart av varg (Canis lupus). Hundar finns av många olika raser, vilka framavlats av
@@ -97,7 +98,7 @@
       </figure>
     </article>
     <article>
-      <h3>Katter</h3>
+      <h2>Katter</h2>
       <p>
         Katt (felis catus) är ett relativt litet, smygjagande rovdjur i familjen kattdjur och ett vanligt
         sällskapsdjur i stora delar av världen. Falbkatten (felis silvestris lybica), en underart till vildkatten
@@ -111,9 +112,30 @@
     </article>
     <a href="#home">Tillbaka</a>
     </article>
-
+    <h2 id="contact">Kontakt</h2>
     <article>
-      <h2 id="contact">Kontakt</h2>
+      <h2>Skicka ett mail</h2>
+      <form>
+        <label for="username">* Ditt namn:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="useremail">* Din mail:</label>
+        <input type="email" id="useremail" name="useremail" required>
+        <label for="userbirthday">* När är du född:</label>
+        <input type="datetime-local" id="userbirthday" name="userbirthday" required>
+        <label for="subject">Ditt ärende:</label>
+        <select id="cars" name="cars">
+          <option value="subject_info">Jag vill veta mer om era tjänster</option>
+          <option value="subject_support">Jag behöver support</option>
+          <option value="subject_invoice">Fakturaärenden</option>
+          <option value="subject_other">Övrigt</option>
+        </select>
+        <label for="usermsg">* Meddelande:</label>
+        <input type="textarea" id="usermsg" name="usermsg" required>
+        <label for="userfile"></label>
+        <input type="file" name="userfile">
+        <input type="submit">Sänd meddelande</button>
+        <input type="reset">Rensa formuläret</button>
+      </form>
       <address>
         <!-- tillgänglighet: omge kontaktinformation med <address> -->
         <p>
