@@ -6,5 +6,5 @@ De olika självbeskrivande brancherna är tänkt att visa på utvecklingen. Det 
  1. main (denna branch)
  2. html
  3. css
- 4. javascript
- 6. architechture
+ 4. architechture
+ 5. javascript
