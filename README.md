@@ -7,4 +7,4 @@ De olika självbeskrivande brancherna är tänkt att visa på utvecklingen. Det 
  2. html
  3. css
  4. javascript
- 6. architechture
+ 6. architecture
