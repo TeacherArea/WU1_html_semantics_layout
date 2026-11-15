@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    
 }
 
 body {
@@ -20,6 +21,10 @@ header h1 {
     font-size: 36px;
 }
 
+h2, h3 {
+    margin-top: 30px;
+}
+
 nav {
     background-color: #444;
     color: #fff;
@@ -27,23 +32,33 @@ nav {
 
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
 }
 
 nav li {
-    margin: 0 10px;
+    border: 0;
+    margin: 0;
+    padding: 0
 }
 
 nav a {
+    display: block;
+    padding: 15px 20px;
     text-decoration: none;
     color: #fff;
 }
 
+nav li a:hover {
+    background-color: #333;
+}
+
+article li {
+    margin: 0 0 0 40px;
+}
+
 main {
-    max-width: 800px;
+    max-width: 80%;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
@@ -51,7 +66,7 @@ main {
 }
 
 article, section {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     padding-bottom: 20px;
     border-bottom: 1px solid #ccc;
 }
@@ -62,40 +77,13 @@ article h2, section h2 {
     margin-bottom: 10px;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #333;
 }
-
-li {
-    margin: 0;
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-li:last-child {
-    border-bottom: none;
-}
-
-li a {
-    text-decoration: none;
-    color:white;
-}
-
-li a:hover {
-    text-decoration: underline;
-}
-
-li::before {
-    color: #333;
-    font-size: 16px;
-    margin-right: 10px;
-}
-
 
 button {
     background-color: #007bff;
@@ -148,7 +136,12 @@ figure figcaption {
     margin-top: 10px;
 }
 
-
+#age-info{
+    margin-right: 40px;
+    margin-bottom: 30px;
+    text-align: end;
+    font-style: italic;
+}
 footer {
     background-color: #333;
     color: #fff;
