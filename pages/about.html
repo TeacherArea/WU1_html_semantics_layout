@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv">
+<!-- tillgänglighetsattribut: lang -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webbutveckling AB</title>
+    <meta name="keywords" content="HTML, sematic html, accessibility" />
+    <meta name="description" content="Web semantic and accessibility on the run" />
+    <meta name="author" content="Knut Gultand" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="home">Webbutveckling Inc</h1>
+        <nav>
+            <button class="menu-icon" id="menuButton" aria-label="Visa navigeringsmeny" aria-controls="navMenu"
+                aria-expanded="false">
+                ☰
+            </button>
+            <ul id="navMenu">
+                <li><a href="../index.html">Hem</a></li>
+                <li><a href="about.html">Om oss</a></li>
+                <li><a href="services.html">Tjänster</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 id="about">Om oss</h2>
+            <article>
+                <p>
+                    Vi är ett företag som specialiserar oss på att skapa avancerade
+                    HTML-hemsidor med fokus på semantiska element och tillgänglighet. Och som älskar djur.
+                </p>
+            </article>
+    </main>
+    <footer aria-label="Contact information">
+        <nav role="navigation" aria-label="support menu">
+            <!-- tillgänglighet: ge information om avvikande användning med roller -->
+            <ul>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Kundinloggning</a></li>
+            </ul>
+        </nav>
+        <p>
+            &copy; <span id="showYear"></span> Webbutveckling AB. Alla rättigheter förbehållna.
+        </p>
+    </footer>
+    <script src="../script/index.js"></script>
+</body>
+
+</html>
+
+<!-- Och glöm inte att undersök kontrasten samt färgschema! Analysera alltid med lighthouse -->

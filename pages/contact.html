@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="sv">
+<!-- tillgänglighetsattribut: lang -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webbutveckling AB</title>
+    <meta name="keywords" content="HTML, sematic html, accessibility" />
+    <meta name="description" content="Web semantic and accessibility on the run" />
+    <meta name="author" content="Knut Gultand" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Webbutveckling Inc</h1>
+        <nav>
+            <button class="menu-icon" id="menuButton" aria-label="Visa navigeringsmeny" aria-controls="navMenu"
+                aria-expanded="false">☰</button>
+            <ul id="navMenu">
+                <li><a href="../index.html">Hem</a></li>
+                <li><a href="about.html">Om oss</a></li>
+                <li><a href="services.html">Tjänster</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 id="contact">Kontakta oss</h2>
+            <h2>Skicka ett mail</h2>
+            <form autocomplete="on" action="/pages/contact-answer.html">
+                <label for="username">* Ditt namn:</label>
+                <input type="text" id="username" name="username" autocomplete="name" required>
+                <label for="useremail">* Din mail:</label>
+                <input type="email" id="useremail" name="useremail" autocomplete="email" required>
+
+                <div class="form-fields-container">
+                    <div class="form-field">
+                        <label for="userbirthday">* När är du född:</label>
+                        <input type="datetime-local" id="userbirthday" name="userbirthday" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="subject">Ditt ärende:</label>
+                        <select id="subject" name="subject">
+                            <option value="subject_info">Jag vill veta mer om era tjänster</option>
+                            <option value="subject_support">Jag behöver support</option>
+                            <option value="subject_invoice">Fakturaärenden</option>
+                            <option value="subject_other">Övrigt</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label for="usermsg">* Meddelande:</label>
+                <textarea id="usermsg" name="usermsg" required></textarea>
+
+                <label for="userfile">Bifoga en fil (valfritt)</label>
+                <input type="file" id="userfile" name="userfile">
+
+                <div class="form-btn-container">
+                    <input class="form-buttons" type="submit" value="Skicka">
+                    <input class="form-buttons" type="reset" value="Rensa">
+                </div>
+            </form>
+            <h2>Besök oss</h2>
+            <article>
+                <address>
+                    <!-- tillgänglighet: omge kontaktinformation med <address> -->
+                    <p>
+                        Kontakta oss via e-post:
+                        <a
+                            href="mailto:info@example.com">info@example.com</a><!-- tillgänglighet: tydlig textbeskrivning för länkar -->
+                    </p>
+                    <p>Besök oss: 123 Gatan, Stad</p>
+                    <p>Ring oss: <a href="tel:+123456789">123 45 67 89</a></p>
+                    <!-- tillgänglighet: skriv telefonnummer som länk -->
+                </address>
+                <a href="#home">Tillbaka</a>
+            </article>
+    </main>
+    <footer aria-label="Contact information">
+        <nav role="navigation" aria-label="support menu">
+            <!-- tillgänglighet: ge information om avvikande användning med roller -->
+            <ul>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Kundinloggning</a></li>
+            </ul>
+        </nav>
+        <p>
+            &copy; <span id="showYear"></span> Webbutveckling AB. Alla rättigheter förbehållna.
+        </p>
+    </footer>
+    <script src="../script/index.js"></script>
+</body>
+
+</html>
+
+<!-- Och glöm inte att undersök kontrasten samt färgschema! Analysera alltid med lighthouse -->
