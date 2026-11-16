@@ -1,170 +1,54 @@
 <!DOCTYPE html>
 <html lang="sv">
-<!-- tillgänglighetsattribut: lang -->
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Webbutveckling AB</title>
-  <meta name="keywords" content="HTML, sematic html, accessibility" />
-  <meta name="description" content="Web semantic and accessibility on the run" />
-  <meta name="author" content="Knut Gultand" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webbutveckling AB</title>
 </head>
 
 <body>
-  <header>
-    <h1 id="home">Webbutveckling AB</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Hem</a></li>
-        <li><a href="#about">Om oss</a></li>
-        <li><a href="#services">Tjänster</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <h1>...</h1>
+    </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#home">Hem</a>
+                </li>
+            </ul>
+        </nav>
+    <main>
+        <h1>Sidrubrik. Bara en &lt;h1&lg; finnas per sida!</h1>
 
-  <main>
-    <h1>Välkommen!</h1>
-    <h2>Senaste nyheter</h2>
-    <article>
-      <h3>Webbplatsen vinner utmärkelse för tillgänglighet</h3>
-      <p>
-        Vår webbplats har nyligen blivit belönad med utmärkelsen "Bästa
-        Tillgänglighet" av Tillgänglighetsorganisationen.
-      </p>
-      <h3>Nya tjänster tillgängliga</h3>
-      <p>
-        Vi har utökat vårt tjänsteutbud och erbjuder nu även
-        sökmotoroptimering och e-handelslösningar.
-      </p>
-    </article>
-    <article>
-      <h2 id="video-title">Vår senaste video</h3>
-        <video aria-labelledby="video with cats" controls>
-          <source src="cats.mp4" type="video/mp4">
-          Your browser does not support HTML video.
-        </video> <!-- tillgänglighet: länka videon till rubrik med aria-labelledby -->
-        <a href="#home">Tillbaka</a>
-    </article>
-    <h1 id="about">Om oss</h1>
-    <article>
-      <p>
-        Vi är ett företag som specialiserar oss på att skapa avancerade
-        HTML-hemsidor med fokus på semantiska element och tillgänglighet. Och som älskar djur.
-      </p>
-    </article>
-    <h1 id="services">Tjänster</h1>
-    <article>
-      <label for="age-input">Din ålder:</label>
-      <input type="text" id="age-input" aria-describedby="age-info" />
-      <!-- tillgänglighet: länka meddelandet till input med aria-describedby -->
-      <p id="age-info">
-        Du måste skriv in din ålder för att se våra kurser. Användare under 18 år måste ha föräldrars tillstånd.
-      </p>
+        <article>
+            <h2>&lt;h2&lg; är underrubrik till &lt;h1&lg;. Kan användas obegränsat.</h2>
+            <p>Brödtext skrivs mellan &lt;p&lg;</p>
+            <h3>&lt;h3&lg; är underrubrik till &lt;h2&lg;, på samma sätt som att &lt;h4&lg; är dess underrubrik, etc.</h3>
+            <p>Brödtext ...</p>
+            <h3>Underrubrik</h3>
+            <p>Brödtext ...</p>
+        </article>
 
-      <ul>
-        <li>Webbdesign</li>
-        <li>Webbutveckling</li>
-        <li>Tillgänglighetsoptimering</li>
-      </ul>
-    </article>
-    <article>
-      <h2>Hästar</h2>
-      <p>
-        Hästar (Equus) är det enda nu levande släktet inom familjen hästdjur (Equidae). Hästar är medelstora
-        däggdjur
-        med avlångt huvud och förhållandevis lång hals med man. De har långa smala ben
-        och står på en tå som skyddas av en hornartad hov. De har lång svans som antingen avslutas med en tofs eller
-        som helt är täckt med böljande hår, så kallat tagel.
-      </p>
-      <figure>
-        <img src="horse.jpeg" alt="Photo of a horse" /><!-- tillgänglighet: lägg till alternativ text -->
-        <figcaption>The horse</figcaption>
-      </figure>
-    </article>
-    <article>
-      <h2>Hundar</h2>
-      <p>
-        Hund (Canis lupus familiaris eller Canis lupus domesticus,[1] tidigare även Canis familiaris) är en
-        domesticerad underart av varg (Canis lupus). Hundar finns av många olika raser, vilka framavlats av
-        människan
-        sedan hunden domesticerades.
-      </p>
-      <figure>
-        <img src="dog.avif" alt="Photo of a dog, a collie" />
-        <figcaption>The dog</figcaption>
-      </figure>
-    </article>
-    <article>
-      <h2>Katter</h2>
-      <p>
-        Katt (felis catus) är ett relativt litet, smygjagande rovdjur i familjen kattdjur och ett vanligt
-        sällskapsdjur i stora delar av världen. Falbkatten (felis silvestris lybica), en underart till vildkatten
-        (felis silvestris), blev tidigt domesticerad av människan som nyttodjur för att hålla efter skadedjur eller
-        för sällskap, både på landet och i stadsmiljö.
-      </p>
-      <figure>
-        <img src="cat.jpg" alt="Photo of a horse" /><!-- tillgänglighet: lägg till alternativ text -->
-        <figcaption>The cat</figcaption>
-      </figure>
-    </article>
-    <a href="#home">Tillbaka</a>
-    </article>
-    <h2 id="contact">Kontakt</h2>
-    <article>
-      <h2>Skicka ett mail</h2>
-      <form>
-        <label for="username">* Ditt namn:</label>
-        <input type="text" id="username" name="username" required>
-        <label for="useremail">* Din mail:</label>
-        <input type="email" id="useremail" name="useremail" required>
-        <label for="userbirthday">* När är du född:</label>
-        <input type="datetime-local" id="userbirthday" name="userbirthday" required>
-        <label for="subject">Ditt ärende:</label>
-        <select id="cars" name="cars">
-          <option value="subject_info">Jag vill veta mer om era tjänster</option>
-          <option value="subject_support">Jag behöver support</option>
-          <option value="subject_invoice">Fakturaärenden</option>
-          <option value="subject_other">Övrigt</option>
-        </select>
-        <label for="usermsg">* Meddelande:</label>
-        <input type="textarea" id="usermsg" name="usermsg" required>
-        <label for="userfile"></label>
-        <input type="file" name="userfile">
-        <input type="submit">Sänd meddelande</button>
-        <input type="reset">Rensa formuläret</button>
-      </form>
-      <address>
-        <!-- tillgänglighet: omge kontaktinformation med <address> -->
-        <p>
-          Kontakta oss via e-post:
-          <a
-            href="mailto:info@example.com">info@example.com</a><!-- tillgänglighet: tydlig textbeskrivning för länkar -->
-        </p>
-        <p>Besök oss: 123 Gatan, Stad</p>
-        <p>Ring oss: <a href="tel:+123456789">123-456-789</a></p>
-        <!-- tillgänglighet: skriv telefonnummer som länk -->
-      </address>
-      <a href="#home">Tillbaka</a>
-    </article>
-  </main>
-  <footer aria-label="Contact information">
-    <nav role="navigation" aria-label="support menu">
-      <!-- tillgänglighet: ge information om avvikande användning med roller -->
-      <ul>
-        <li><a href="#">Support</a></li>
-        <li><a href="#">Kundinloggning</a></li>
-      </ul>
-    </nav>
-    <p>
-      &copy; <span id="showYear"></span> Webbutveckling AB. Alla rättigheter förbehållna.
-    </p>
-  </footer>
-  <script src="index.js"></script>
+        <article>
+            <h2>Det viktiga formuläret</h2>
+            <form>
+                <label for="unikt_namn_för_input">* Ditt namn:</label>
+                <input type="text" id="css_namn" name="unikt_namn_för_input" required>
+                <label for="unikt_namn_för_input">* När är du född:</label>
+                <input type="datetime-local" id="userbirthday" name="unikt_namn_för_input" required>
+                <label for="unikt_namn_för_textarea">* Meddelande:</label>
+                <input type="textarea" id="usermsg" name="unikt_namn_för_textarea" required>
+                <input type="submit" name="unikt_namn_för_arrayen">Sänd meddelande</button>
+                <input type="reset">Rensa formuläret</button>
+            </form>
+            <address>
+                <p>...</p>
+            </address>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; Ett årtal</p>
+    </footer>
 </body>
 
 </html>
-
-<!-- Och glöm inte att undersök kontrasten samt färgschema! Analysera alltid med lighthouse -->
